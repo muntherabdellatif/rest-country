@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- font awesome -->
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.15.4/css/all.css"
+      integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm"
+      crossorigin="anonymous"
+    />
+    <title>main page</title>
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <div class="header-section">
+      <div class="container">
+        <div class="header-title">
+          <h1 class="title">Where in the world?</h1>
+        </div>
+        <div class="header-dark-mode">
+          <div class="dark-mode-icon">
+            <i class="fas fa-moon dark-moon" hidden></i>
+            <i class="far fa-moon light-moon"></i>
+          </div>
+          <div class="dark-mode-text">
+            <p class="dark-mode">Dark Mode</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="search-section">
+      <div class="container">
+        <div class="search-form">
+          <div class="search-icon">
+            <i class="fas fa-search"></i>
+          </div>
+          <input
+            type="search"
+            name="country"
+            class="search"
+            placeholder="Search of a country..."
+          />
+        </div>
+        <input
+          name="filter-by-region-input"
+          list="filter-by-region"
+          class="filter-by-region-input"
+          placeholder="filter by region"
+        />
+        <datalist class="filter-by-region" id="filter-by-region">
+          <option class="region" value="Africa"></option>
+          <option class="region" value="America"></option>
+          <option class="region" value="Asia"></option>
+          <option class="region" value="Europe"></option>
+          <option class="region" value="Oceania"></option>
+        </datalist>
+      </div>
+    </div>
+    <div class="country-section">
+      <div class="container box-container"></div>
+    </div>
+    <script src="js/index.js"></script>
+    <script src="js/color.js"></script>
+  </body>
+</html>

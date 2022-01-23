@@ -1,0 +1,215 @@
+@import "common";
+
+// search section
+
+.search-section {
+  margin-top: 80px;
+  padding: 30px 0;
+
+  .container {
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+
+    .search-form {
+      position: relative;
+      width: 40%;
+
+      .search {
+        background-color: var(--background1);
+        border-radius: 5px;
+        border: none;
+        box-shadow: 0 0 8px 0 var(--boxShadowColor);
+        color: var(--paragraphColor1);
+        padding: 20px 20px 20px 45px;
+        width: 100%;
+
+        ::placeholder {
+          color: var(--paragraphColor2);
+        }
+      }
+
+      .search-icon {
+        left: 16px;
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+
+        .fa-search {
+          color: var(--paragraphColor3);
+          font-weight: 600;
+        }
+      }
+    }
+
+    .filter-by-region-input {
+      background-color: var(--background1);
+      border-radius: 5px;
+      border: none;
+      box-shadow: 0 0 8px 0 var(--boxShadowColor);
+      color: var(--paragraphColor1);
+      padding: 20px;
+
+      ::placeholder {
+        color: var(--paragraphColor2);
+      }
+    }
+  }
+}
+
+.country-section {
+  .box-container {
+    display: grid;
+    grid-gap: 24px;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+
+    .box {
+      border-radius: 10px;
+      box-shadow: 0 0 8px 3px #00000036;
+      margin: 5px auto;
+      overflow: hidden;
+      width: 203px;
+
+      .link {
+        text-decoration: none;
+        cursor: pointer;
+
+        .flag-container {
+          background-position: center;
+          background-repeat: no-repeat;
+          background-size: cover;
+          height: 131px;
+          width: 100%;
+
+          .flagImg {
+            height: 135px;
+            width: 100%;
+          }
+        }
+
+        .Country-description {
+          padding: 10px 20px;
+          color: var(--paragraphColor1);
+
+          .Title {
+            .country-name {
+              font-size: 21px;
+              margin: 0;
+            }
+          }
+
+          .description-list {
+            .description {
+              font-weight: 400;
+              font-size: 16px;
+              line-height: 1;
+
+              .value {
+                font-weight: 100;
+                color: var(--paragraphColor2);
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+@media screen and (max-width: 769px) {
+  .container {
+    padding: 0 15px;
+  }
+
+  .header-section {
+    .container {
+      height: 80px;
+
+      .header-title {
+        .title {
+          font-size: 18px;
+        }
+      }
+
+      .header-dark-mode {
+        .dark-mode-icon {
+          .dark-moon {
+            display: none;
+          }
+        }
+      }
+    }
+  }
+
+  .search-section {
+    margin-top: 70px;
+
+    .container {
+      align-items: initial;
+      display: flex;
+      flex-direction: column;
+      gap: 40px;
+
+      .search-form {
+        width: 100%;
+
+        .search {
+          width: 100%;
+        }
+      }
+
+      .filter-by-region-input {
+        width: 50%;
+      }
+    }
+  }
+  .country-section .box-container {
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 55px;
+
+    .box {
+      width: 200px;
+    }
+  }
+}
+@media screen and (max-width: 426px) {
+  .header-section {
+    .container {
+      .header-title {
+        .title {
+          font-size: 16px;
+        }
+      }
+
+      .header-dark-mode {
+        font-size: 16px;
+      }
+    }
+  }
+  .search-section {
+    .container {
+      .filter-by-region-input {
+        width: 200px;
+      }
+    }
+  }
+  .country-section {
+    .box-container {
+      .box {
+        margin: 5px auto;
+        width: 80%;
+      }
+    }
+  }
+}
+@media (min-width: 1025px) {
+  .country-section {
+    .box-container {
+      gap: 38px;
+      grid-template-columns: repeat(auto-fill, minmax(230px, 1fr));
+
+      .box {
+        width: 230px;
+      }
+    }
+  }
+}
