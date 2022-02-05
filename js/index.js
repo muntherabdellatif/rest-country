@@ -13,7 +13,7 @@ function AddEventForLink() {
     item.addEventListener("click", () => {
       const linkIndex = item.dataset.id;
       localStorage.setItem("countryIndex", linkIndex);
-      window.open("../detail.html");
+      window.open("./detail.html");
     });
   });
 }
